@@ -1,0 +1,3 @@
+[submodule "system/workstation-ostree-config"]
+	path = system/workstation-ostree-config
+	url = https://pagure.io/workstation-ostree-config

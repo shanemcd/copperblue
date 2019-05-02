@@ -1,0 +1,3 @@
+# Use fedora:29 because 30 isn't working: https://bugzilla.redhat.com/show_bug.cgi?id=1698681
+from fedora:29
+run dnf update -y && dnf install -y mumble

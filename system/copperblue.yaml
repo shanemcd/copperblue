@@ -1,0 +1,145 @@
+ref: fedora/rawhide/${basearch}/copperblue
+
+automatic_version_prefix: "31"
+mutate-os-release: "31"
+
+rojig:
+  name: fedora-copperblue
+  summary: "Fedora Silverblue lighter base image"
+  license: MIT
+packages:
+  # Boot
+  - efibootmgr
+  - grub2
+  - grub2-efi-x64
+  - kernel
+  - kernel-modules
+  - kernel-modules-extra
+  - linux-firmware
+  - microcode_ctl
+  - ostree-grub2
+
+  # Base
+  - acl
+  - attr
+  - audit
+  - avahi
+  - basesystem
+  - bash
+  - cryptsetup
+  - file
+  - filesystem
+  - hostname
+  - logrotate
+  - mcelog
+  - mdadm
+  - nss-mdns
+  - pam_krb5
+  - passwd
+  - pciutils
+  - polkit
+  - qemu-guest-agent
+  - rng-tools
+  - rootfiles
+  - setup
+  - shadow-utils
+  - shim
+  - systemd
+  - systemd-udev
+  - time
+  - util-linux
+  - vconfig
+  - which
+
+  # SELinux
+  - selinux-policy-targeted
+
+  # Network
+  - bind-utils
+  - dnsmasq
+  - iproute
+  - iptables
+  - iputils
+  - NetworkManager
+
+  # Multi-user
+  - bash-completion
+  - bc
+  - curl
+  - dconf
+  - gnupg2
+  - less
+  - lsof
+  - man-db
+  - man-pages
+  - mtr
+  - nss-altfiles
+  - openssh-clients
+  - procps-ng
+  - rsync
+  - strace
+  - sudo
+  - tar
+  - tree
+  - unzip
+  - vim-enhanced
+  - wget
+  - zip
+
+  # Devel
+  - elfutils-libelf-devel
+  - glibc-devel
+  - kernel-devel
+
+  # Container
+  - buildah
+  - git-core
+  - lvm2
+  - nmap-ncat
+  - podman
+  - rpm
+  - rpm-ostree
+  - skopeo
+  - toolbox
+
+  # Desktop
+  - alsa-plugins-pulseaudio
+  - alsa-utils
+  - egl-wayland
+  - glx-utils
+  - gnu-free-mono-fonts
+  - gnu-free-sans-fonts
+  - gnu-free-serif-fonts
+  - libwayland-client
+  - libwayland-cursor
+  - libwayland-egl
+  - mesa-dri-drivers
+  - mesa-libEGL
+  - mousetweaks
+  - pulseaudio
+  - rxvt-unicode
+  - sway
+  - usbutils
+  - wlroots
+  - xorg-x11-server-Xwayland
+
+repos:
+  - fedora-rawhide
+
+selinux: true
+documentation: true
+boot_location: new
+etc-group-members:
+  - wheel
+tmp-is-dir: true
+
+postprocess-script: post.sh
+
+ignore-removed-users:
+  - root
+ignore-removed-groups:
+  - root
+check-passwd: { type: file, filename: passwd }
+check-groups: { type: file, filename: group }
+
+default_target: multi-user.target
