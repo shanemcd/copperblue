@@ -13,9 +13,10 @@ From a Silverblue system, install Copperblue by running:
 sudo ostree init --repo=/ostree/copperblue
 
 # Compose the copperblue tree:
-pushd os
+pushd system
+git submodule update --init
 sudo rpm-ostree compose tree -r /ostree/copperblue --workdir /ostree/copperblue/tmp copperblue.yaml
-popd os
+popd
 
 # Copy the tree in system ostree repo:
 sudo ostree pull-local /ostree/copperblue fedora/rawhide/x86_64/copperblue
