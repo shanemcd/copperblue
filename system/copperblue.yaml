@@ -18,6 +18,8 @@ packages:
   - linux-firmware
   - microcode_ctl
   - ostree-grub2
+  - plymouth
+  - plymouth-system-theme
 
   # Base
   - acl
@@ -38,7 +40,6 @@ packages:
   - passwd
   - pciutils
   - polkit
-  - qemu-guest-agent
   - rng-tools
   - rootfiles
   - setup
@@ -68,11 +69,13 @@ packages:
   - curl
   - dconf
   - gnupg2
+  - htop
   - less
   - lsof
   - man-db
   - man-pages
   - mtr
+  - nmap-ncat
   - nss-altfiles
   - openssh-clients
   - procps-ng
@@ -93,35 +96,75 @@ packages:
 
   # Container
   - buildah
+  - fedora-repos-ostree
   - git-core
   - lvm2
-  - nmap-ncat
   - podman
   - rpm
   - rpm-ostree
   - skopeo
   - toolbox
 
+  # QEMU guest
+  - qemu-guest-agent
+  - spice-vdagent
+
   # Desktop
   - alsa-plugins-pulseaudio
   - alsa-utils
-  - egl-wayland
   - glx-utils
   - gnu-free-mono-fonts
   - gnu-free-sans-fonts
   - gnu-free-serif-fonts
-  - libwayland-client
-  - libwayland-cursor
-  - libwayland-egl
   - mesa-dri-drivers
   - mesa-libEGL
   - mousetweaks
   - pulseaudio
-  - rxvt-unicode
-  - sway
   - usbutils
-  - wlroots
-  - xorg-x11-server-Xwayland
+
+  # X11
+  - dunst
+  - feh
+  - ghc-xmonad-contrib
+  - rxvt-unicode
+  - xcompmgr
+  - xmonad
+  - xmonad-config
+  - xmobar
+  - xorg-x11-drv-evdev
+  - xorg-x11-drv-fbdev
+  - xorg-x11-drv-intel
+  - xorg-x11-drv-libinput
+  - xorg-x11-drv-qxl
+  - xorg-x11-drv-vesa
+  - xorg-x11-utils
+  - xorg-x11-xauth
+  - xorg-x11-xinit
+  - xterm
+
+  # Wayland
+  #- egl-wayland
+  #- libwayland-client
+  #- libwayland-cursor
+  #- libwayland-egl
+  #- sway
+  #- xorg-x11-server-Xwayland
+  #- wlroots
+
+  # Heavy desktop
+  #- desktop-backgrounds-gnome
+  #- gdm
+  #- glib-networking
+  #- gnome-backgrounds
+  #- gnome-classic-session
+  #- gnome-color-manager
+  #- gnome-initial-setup
+  #- gnome-session-wayland-session
+  #- gnome-settings-daemon
+  #- gnome-shell
+  #- gnome-terminal
+  #- gnome-themes-extra
+  #- pinentry-gnome3
 
 repos:
   - fedora-rawhide
@@ -142,4 +185,6 @@ ignore-removed-groups:
 check-passwd: { type: file, filename: passwd }
 check-groups: { type: file, filename: group }
 
+# Console login for sway...
 default_target: multi-user.target
+#default_target: graphical.target
