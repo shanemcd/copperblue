@@ -24,6 +24,8 @@ APP=mumble
 ARGS=(
     # Delete container when we are done
     --rm
+    # Disable SELinux label to enable mounting host volume
+    --security-opt label=disable
     # Mount persistent config
     -v ~/.copperblue/${APP}/:/root/
     # Share X11
