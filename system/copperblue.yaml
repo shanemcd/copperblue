@@ -58,6 +58,7 @@ packages:
   # Network
   - bind-utils
   - dnsmasq
+  - ethtool
   - iproute
   - iptables
   - iputils
@@ -75,6 +76,7 @@ packages:
   - man-db
   - man-pages
   - mtr
+  - net-tools
   - nmap-ncat
   - nss-altfiles
   - openssh-clients
@@ -128,6 +130,7 @@ packages:
   - ghc-xmonad-contrib
   - rxvt-unicode
   - xcompmgr
+  - xdm
   - xmonad
   - xmonad-config
   - xmobar
