@@ -76,6 +76,7 @@ packages:
   - man-db
   - man-pages
   - mtr
+  - ncdu
   - net-tools
   - nmap-ncat
   - nss-altfiles
