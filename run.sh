@@ -25,6 +25,7 @@ shift
 
 # Ensure buildah and podman are installed
 if ! type -p buildah > /dev/null || ! type -p podman > /dev/null; then
+    echo "Oh no, buildah is not installed, running dnf now..."
     sudo dnf install -y buildah podman
 fi
 
