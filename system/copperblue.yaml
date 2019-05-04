@@ -64,6 +64,11 @@ packages:
   - iputils
   - NetworkManager
 
+  # Disk management
+  - e2fsprogs
+  - parted
+  - squashfs-tools
+
   # Multi-user
   - bash-completion
   - bc
