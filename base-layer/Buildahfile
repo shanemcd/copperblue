@@ -39,6 +39,7 @@ RUN dnf install -y \
  gdk-pixbuf2-modules \
  geoclue2 \
  giflib \
+ git \
  glib-networking \
  google-droid-sans-fonts \
  graphite2 \
@@ -64,6 +65,7 @@ RUN dnf install -y \
  jbigkit-libs \
  json-glib \
  lcms2 \
+ less \
  libICE \
  libSM \
  libX11 \
@@ -163,6 +165,7 @@ RUN dnf install -y \
  polkit-pkla-compat \
  pulseaudio-libs \
  rest \
+ ripgrep \
  rtkit \
  sbc \
  shared-mime-info \

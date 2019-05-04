@@ -1,2 +1,12 @@
-from fedora:30
-run dnf install -y emacs
+from base-layer
+run dnf install -y \
+  '@RPM Development Tools' '@C Development Tools and Libraries' \
+  gtk3-devel gstreamer-devel clutter-devel libgda-devel gobject-introspection-devel \
+  gtk-doc intltool gnutls-utils gnutls gnutls-c++ gnutls-devel \
+  vala libvala libvala-devel gperf \
+  cmake freetype-devel fontconfig-devel libxcb-devel '@Development Tools' \
+  rust cargo ghc-ghc cabal-install golang godep \
+  xapian-core-devel gmime-devel libtalloc-devel zlib-devel \
+  python3-sphinx qt5-qtlocation-devel qt5-qtsensors-devel readline-devel qt5-qtwebengine-devel qt5-qttools-devel qt5-qtwebsockets-devel qt5-qtsvg-devel \
+  libsndfile-devel fftw-devel libXt-devel libX11-devel boost-devel alsa-lib-devel systemd-devel libatomic avahi-devel \
+  emacs info man-pages guile ghc-ghci hlint rustfmt glslang

@@ -27,8 +27,9 @@ ARGS=(
     # Disable SELinux label to enable mounting host volume
     --security-opt label=disable
     # Mount persistent config
-    -v ~/.copperblue/${APP}/:/root/
+    -v ~/.copperblue/${APP}/:/root
     # Share X11
+    -v ~/.Xauthority:/root/.Xauthority
     -v /tmp/.X11-unix/:/tmp/.X11-unix/
     -e DISPLAY=:0
     # Share pulseaudio
@@ -36,6 +37,10 @@ ARGS=(
     -v /run/user/1000/:/run/user/1000/
     -e XDG_RUNTIME_DIR=/run/user/1000
     -e PULSE_SERVER=/run/user/1000/pulse/native
+    # Share git
+    -v ~/git/:/root/git/
+    # Start in home
+    -w /root/
     # The image name
     localhost/${APP}:${TAG:-latest}
     # The command

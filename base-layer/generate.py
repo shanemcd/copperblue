@@ -17,8 +17,8 @@
 
 import subprocess
 
-common = ["strace", "alsa-plugins-pulseaudio", "pulseaudio-libs"]
-images = ["emacs", "firefox"]
+common = ["less", "git", "ripgrep", "strace"]
+images = ["mumble", "firefox"]
 
 def pkglist(image):
     print("Collecting the packages of the image %s" % image)
