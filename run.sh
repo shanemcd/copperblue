@@ -33,6 +33,11 @@ if ! test -d ~/.copperblue/${APP}; then
     mkdir -p ~/.copperblue/${APP}
 fi
 
+# Ensure base-layer is built
+if ! buildah images -nq localhost/base-layer:latest &> /dev/null; then
+    buildah bud -f Buildahfile -t base-layer:latest base-layer
+fi
+
 # Build image if needed
 if ! buildah images -nq localhost/${APP}:latest &> /dev/null; then
     DATE=$(date "+%Y-%m-%d")
