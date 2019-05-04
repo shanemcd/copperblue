@@ -9,4 +9,5 @@ run dnf install -y \
   xapian-core-devel gmime-devel libtalloc-devel zlib-devel \
   python3-sphinx qt5-qtlocation-devel qt5-qtsensors-devel readline-devel qt5-qtwebengine-devel qt5-qttools-devel qt5-qtwebsockets-devel qt5-qtsvg-devel \
   libsndfile-devel fftw-devel libXt-devel libX11-devel boost-devel alsa-lib-devel systemd-devel libatomic avahi-devel \
+  git-review git-pull-request \
   emacs info man-pages guile ghc-ghci hlint rustfmt glslang
