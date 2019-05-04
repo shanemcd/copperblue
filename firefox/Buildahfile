@@ -1,0 +1,2 @@
+from base-layer
+run dnf install -y firefox
