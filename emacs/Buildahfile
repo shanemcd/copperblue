@@ -5,7 +5,9 @@ run dnf install -y \
   gtk-doc intltool gnutls-utils gnutls gnutls-c++ gnutls-devel \
   vala libvala libvala-devel gperf \
   cmake freetype-devel fontconfig-devel libxcb-devel '@Development Tools' \
-  rust cargo ghc-ghc cabal-install golang godep \
+  rust cargo \
+  ghc-ghc cabal-install happy ghc-template-haskell-devel \
+  golang godep \
   xapian-core-devel gmime-devel libtalloc-devel zlib-devel \
   python3-sphinx qt5-qtlocation-devel qt5-qtsensors-devel readline-devel qt5-qtwebengine-devel qt5-qttools-devel qt5-qtwebsockets-devel qt5-qtsvg-devel \
   libsndfile-devel fftw-devel libXt-devel libX11-devel boost-devel alsa-lib-devel systemd-devel libatomic avahi-devel \
