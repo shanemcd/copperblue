@@ -11,3 +11,5 @@ run dnf install -y \
   libsndfile-devel fftw-devel libXt-devel libX11-devel boost-devel alsa-lib-devel systemd-devel libatomic avahi-devel \
   git-review git-pull-request \
   emacs info man-pages guile ghc-ghci hlint rustfmt glslang
+# Install devtool for my project
+run dnf builddep -y ostree
