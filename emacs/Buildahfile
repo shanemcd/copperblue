@@ -9,9 +9,11 @@ run dnf install -y \
   ghc-ghc cabal-install happy ghc-template-haskell-devel \
   golang godep \
   xapian-core-devel gmime-devel libtalloc-devel zlib-devel \
+  isync msmtp libnotify dovecot-pigeonhole texinfo \
   python3-sphinx qt5-qtlocation-devel qt5-qtsensors-devel readline-devel qt5-qtwebengine-devel qt5-qttools-devel qt5-qtwebsockets-devel qt5-qtsvg-devel \
   libsndfile-devel fftw-devel libXt-devel libX11-devel boost-devel alsa-lib-devel systemd-devel libatomic avahi-devel \
   git-review git-pull-request \
+  poppler-utils mupdf \
   emacs info man-pages guile ghc-ghci hlint rustfmt glslang
 # Install devtool for my project
 run dnf builddep -y ostree
