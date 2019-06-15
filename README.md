@@ -19,10 +19,10 @@ sudo rpm-ostree compose tree -r /ostree/copperblue --workdir /ostree/copperblue/
 popd
 
 # Copy the tree in system ostree repo:
-sudo ostree pull-local /ostree/copperblue fedora/rawhide/x86_64/copperblue
+sudo ostree pull-local /ostree/copperblue fedora/30/x86_64/copperblue
 
 # Install the tree:
-sudo ostree admin deploy fedora/rawhide/x86_64/copperblue
+sudo ostree admin deploy fedora/30/x86_64/copperblue
 ```
 
 # Applications

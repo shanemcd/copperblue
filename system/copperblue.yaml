@@ -1,7 +1,7 @@
-ref: fedora/rawhide/${basearch}/copperblue
+ref: fedora/30/${basearch}/copperblue
 
-automatic_version_prefix: "31"
-mutate-os-release: "31"
+automatic_version_prefix: "30"
+mutate-os-release: "30"
 
 rojig:
   name: fedora-copperblue
@@ -12,9 +12,9 @@ packages:
   - efibootmgr
   - grub2
   - grub2-efi-x64
-  - kernel
+  - kernel-core
   - kernel-modules
-  - kernel-modules-extra
+  #- kernel-modules-extra
   - linux-firmware
   - microcode_ctl
   - ostree-grub2
@@ -28,6 +28,7 @@ packages:
   - avahi
   - basesystem
   - bash
+  - chrony
   - cryptsetup
   - file
   - filesystem
@@ -54,24 +55,38 @@ packages:
 
   # SELinux
   - selinux-policy-targeted
+  - policycoreutils
+  - policycoreutils-python-utils
 
   # Network
   - bind-utils
+  - bridge-utils
   - dnsmasq
   - ethtool
+  - firewalld
   - iproute
   - iptables
   - iputils
+  - iwd
+  - iwl7260-firmware
+  - tcpdump
   - NetworkManager
+
+  # Network filesystems
+  - cifs-utils
+  - samba-client
+  - nfs-utils
 
   # Disk management
   - e2fsprogs
+  - iotop
   - parted
   - squashfs-tools
 
   # Multi-user
   - bash-completion
   - bc
+  - bzip2
   - curl
   - dconf
   - gnupg2
@@ -87,6 +102,8 @@ packages:
   - nss-altfiles
   - openssh-clients
   - procps-ng
+  - psmisc
+  - p7zip
   - rsync
   - strace
   - sudo
@@ -94,13 +111,16 @@ packages:
   - tree
   - unzip
   - vim-enhanced
+  - vlock
   - wget
   - zip
 
   # Devel
+  - ansible
   - elfutils-libelf-devel
   - glibc-devel
-  - kernel-devel
+  #- kernel-devel
+  - libselinux-python
 
   # Container
   - buildah
@@ -120,20 +140,32 @@ packages:
   # Desktop
   - alsa-plugins-pulseaudio
   - alsa-utils
+  - dosfstools
   - glx-utils
   - gnu-free-mono-fonts
   - gnu-free-sans-fonts
   - gnu-free-serif-fonts
   - mesa-dri-drivers
+  - mesa-vulkan-drivers
   - mesa-libEGL
   - mousetweaks
+  - network-manager-applet
+  - NetworkManager-wifi
+  - pavucontrol
+  - pinentry-gtk
   - pulseaudio
+  - pulseaudio-utils
+  - pwsafe
+  - rcm
   - usbutils
+  - wireless-tools
 
   # X11
+  - awesome
   - dunst
   - feh
   - ghc-xmonad-contrib
+  - i3lock
   - rxvt-unicode
   - xcompmgr
   - xdm
@@ -175,8 +207,13 @@ packages:
   #- gnome-themes-extra
   #- pinentry-gnome3
 
+install-langs:
+  - en_US
+
 repos:
-  - fedora-rawhide
+  - fedora-30-updates
+  - fedora-30
+#  - local
 
 selinux: true
 documentation: true
