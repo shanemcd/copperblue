@@ -1,7 +1,7 @@
-ref: fedora/31/${basearch}/copperblue
+ref: fedora/32/${basearch}/copperblue
 
-automatic_version_prefix: "31"
-mutate-os-release: "31"
+automatic_version_prefix: "32"
+mutate-os-release: "32"
 
 rojig:
   name: fedora-copperblue
@@ -224,8 +224,8 @@ install-langs:
   - en_US
 
 repos:
-  - fedora-31-updates
-  - fedora-31
+  - fedora-32-updates
+  - fedora-32
 #  - local
 
 selinux: true
