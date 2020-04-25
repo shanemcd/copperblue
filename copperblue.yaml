@@ -14,12 +14,14 @@ packages:
   - grub2-efi-x64
   - kernel-core
   - kernel-modules
-  #- kernel-modules-extra
+  - kernel-modules-extra
   - linux-firmware
   - microcode_ctl
   - ostree-grub2
   - plymouth
   - plymouth-system-theme
+  - fwupd
+  - bolt
 
   # Base
   - acl
@@ -58,19 +60,25 @@ packages:
   - policycoreutils
   - policycoreutils-python-utils
 
+  # Perf
+  - perf
+
   # Network
   - bind-utils
   - bridge-utils
   - dnsmasq
   - ethtool
-  - firewalld
   - iproute
   - iptables
+  - nftables
   - iputils
   - iwd
   - iwl7260-firmware
+
+  - socat
   - tcpdump
   - NetworkManager
+  - wpa_supplicant
 
   # Network filesystems
   - cifs-utils
@@ -101,6 +109,7 @@ packages:
   - nmap-ncat
   - nss-altfiles
   - openssh-clients
+  - openssh-server
   - procps-ng
   - psmisc
   - p7zip
@@ -108,6 +117,7 @@ packages:
   - strace
   - sudo
   - tar
+  - tmux
   - tree
   - unzip
   - vim-enhanced
@@ -119,6 +129,7 @@ packages:
   - ansible
   - elfutils-libelf-devel
   - glibc-devel
+  - make
   #- kernel-devel
   #- libselinux-python
 
@@ -140,6 +151,7 @@ packages:
   # Desktop
   - alsa-plugins-pulseaudio
   - alsa-utils
+  - alsa-tools
   - dosfstools
   - glx-utils
   - gnu-free-mono-fonts
@@ -162,16 +174,17 @@ packages:
 
   # X11
   - awesome
+  - redshift
   - dunst
   - feh
-  - ghc-xmonad-contrib
+  #- ghc-xmonad-contrib
   - i3lock
   - rxvt-unicode
   - xcompmgr
   - xdm
-  - xmonad
-  - xmonad-config
-  - xmobar
+  #- xmonad
+  #- xmonad-config
+  #- xmobar
   - xorg-x11-drv-evdev
   - xorg-x11-drv-fbdev
   - xorg-x11-drv-intel
