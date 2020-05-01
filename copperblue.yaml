@@ -39,7 +39,6 @@ packages:
   - mcelog
   - mdadm
   - nss-mdns
-  - pam_krb5
   - passwd
   - pciutils
   - polkit
@@ -154,6 +153,7 @@ packages:
   - alsa-tools
   - dosfstools
   - glx-utils
+  - gdouros-symbola-fonts
   - gnu-free-mono-fonts
   - gnu-free-sans-fonts
   - gnu-free-serif-fonts
