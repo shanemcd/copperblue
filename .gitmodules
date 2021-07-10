@@ -1,3 +1,4 @@
 [submodule "system/workstation-ostree-config"]
 	path = workstation-ostree-config
 	url = https://pagure.io/workstation-ostree-config
+	branch = f34
