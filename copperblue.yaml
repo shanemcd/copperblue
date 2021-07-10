@@ -1,7 +1,6 @@
-ref: fedora/32/${basearch}/copperblue
+ref: fedora/34/${basearch}/copperblue
 
-automatic_version_prefix: "32"
-mutate-os-release: "32"
+releasever: "34"
 
 rojig:
   name: fedora-copperblue
@@ -180,7 +179,7 @@ packages:
   #- ghc-xmonad-contrib
   - i3lock
   - rxvt-unicode
-  - xcompmgr
+  # - xcompmgr
   - xdm
   #- xmonad
   #- xmonad-config
@@ -224,13 +223,13 @@ install-langs:
   - en_US
 
 repos:
-  - fedora-32-updates
-  - fedora-32
+  - fedora-34-updates
+  - fedora-34
 #  - local
 
 selinux: true
 documentation: true
-boot_location: new
+boot_location: modules
 etc-group-members:
   - wheel
 tmp-is-dir: true

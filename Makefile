@@ -1,7 +1,7 @@
 all:
-	rpm-ostree compose tree -r /ostree/copperblue --workdir /ostree/copperblue/tmp copperblue.yaml
-	ostree pull-local /ostree/copperblue fedora/32/x86_64/copperblue
-	ostree admin deploy fedora/32/x86_64/copperblue
+	rpm-ostree compose tree --unified-core -r /ostree/copperblue copperblue.yaml
+	ostree pull-local /ostree/copperblue fedora/34/x86_64/copperblue
+	ostree admin deploy fedora/34/x86_64/copperblue
 
 clean:
 	rm -Rf /ostree/copperblue
